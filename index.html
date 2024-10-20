@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="centro">
+        <div id="block1" class="block" onclick="Click_Block('audio1')"></div>
+        <div id="block2" class="block" onclick="Click_Block('audio2')"></div>
+        <div id="block3" class="block" onclick="Click_Block('audio3')"></div>
+        <div id="block4" class="block" onclick="Click_Block('audio4')"></div>        
+    </div>
+    <audio id="audio1" src="som/som1.mp3" preload="auto"></audio>
+    <audio id="audio2" src="som/som2.mp3" preload="auto"></audio>
+    <audio id="audio3" src="som/som3.mp3" preload="auto"></audio>
+    <audio id="audio4" src="som/som4.mp3" preload="auto"></audio>
+    <div id="Painel">
+        <button onclick="Start()">START</button class="block">
+        <button onclick="Confirm()">CONFIRM</button class="block">
+    </div>
+</body>
+</html>
