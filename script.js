@@ -1,10 +1,12 @@
 let guardar_click = []; // Array global para armazenar os cliques do jogador
 let guardar_notas = []; // Array global para armazenar as notas aleatórias geradas
+let nivel = 1
 
 function Start() {
+    document.getElementById("nivel").textContent = nivel;
     guardar_notas = []; // Limpa a array de notas antes de começar um novo jogo
     guardar_click = []; // Limpa os cliques anteriores
-    const blocos_aleatorios = Math.floor(Math.random() * 6) + 1; // Define a quantidade de blocos aleatórios que vão tocar
+    const blocos_aleatorios = nivel + Math.floor(Math.random() * 3) + 1; // Define a quantidade de blocos aleatórios que vão tocar
 
     for (var i = 0; i < blocos_aleatorios; i++) { // Loop para repetir o código para cada bloco aleatório
         setTimeout(() => {
@@ -46,10 +48,14 @@ function Confirm() {
     // Compara as notas guardadas com os cliques do jogador
     if (Comparar_Array(guardar_click, guardar_notas)) {
         alert("Você venceu!"); // Alerta de vitória
+        nivel++; // Aumenta a dificuldade
+        document.getElementById("nivel").textContent = nivel;
         guardar_click = [];  // Limpa a array de cliques após uma vitória
         guardar_notas = [];  // Limpa a array de notas após uma vitória
     } else {
         alert("Você perdeu!"); // Alerta de derrota
+        nivel = 1 // Volta pro nível um!
+        document.getElementById("nivel").textContent = nivel;
         guardar_click = []; // Limpa a array de cliques após uma perda
         guardar_notas = []; // Limpa a array de notas após uma perda
     }

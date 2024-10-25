@@ -9,9 +9,16 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+#nivel {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 #centro {
     display: flex; 
-    margin-bottom: 20px; 
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .block {
